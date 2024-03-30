@@ -31,7 +31,7 @@ int main(){
         printf("Enter Practical marks : \n");
         student[i].pract_total=0;
         for(int j=0;j<5;j++){
-            printf("%d practical marks : ",j+1);
+            printf("%d practical marks : \n",j+1);
             scanf("%d",&student[i].pract[j]);
             student[i].pract_total+=student[i].pract[j];
         }
@@ -43,7 +43,7 @@ int main(){
         student[i].ut_total = (student[i].ut[0]+student[i].ut[1])/2;
 
     }
-    int a,count = 0;
+    int a;
     int search;
     printf("Enter enrollment number to search : ");
     scanf("%d",&search);
@@ -53,24 +53,16 @@ int main(){
     printf("Enrollment number : %d\n",student[a].enroll);
     printf("Division : %s\n",student[a].div);
     printf("Department : %s\n",student[a].dept);
-    printf("                Practical Marks                \n");
-    printf("PR1\tPR2\tPR3\tPR4\tPR5\t\tAvg Total\n");
+    printf("                   Practical Marks                   \n");
+    printf("PR1\tPR2\tPR3\tPR4\tPR5\n");
     for(int b=0;b<5;b++){
         printf(" %d \t",student[a].pract[b]);
     }
-    printf("\t   %d\n",student[a].pract_total);
-    printf("             Unit test Marks             \n");
-    printf("UT1\t\tUT2\t\tAvg Total\n");
-    for(int f=0;f<2;f++){
-        printf("%d\t\t",student[a].ut[f]);
-    }
-    printf("   %d",student[a].ut_total);
-    count++;
         }
-    }
-    if(count==0){
+        else
         printf("Invalid Enrollment Number.");
     }
+    
     
     return 0;
 }
