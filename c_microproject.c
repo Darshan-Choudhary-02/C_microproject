@@ -6,7 +6,7 @@ typedef struct data{
         int enroll;
         char div[5];
         char dept[5];
-        int pract[20];
+        int pract[5];
         int pract_total;
         int ut[2];
         int ut_total;
@@ -30,12 +30,12 @@ int main(){
         scanf("%s",student[i].dept);
         printf("Enter Practical marks : \n");
         student[i].pract_total=0;
-        for(int j=0;j<20;j++){
+        for(int j=0;j<5;j++){
             printf("%d practical marks : \n",j+1);
             scanf("%d",&student[i].pract[j]);
             student[i].pract_total+=student[i].pract[j];
         }
-        student[i].pract_total=student[i].pract_total/4;
+        student[i].pract_total=student[i].pract_total/5;
         printf("\nEnter marks of UT 1 : ");
         scanf("%d",&student[i].ut[0]);
         printf("Enter marks of UT 2 : ");
@@ -54,12 +54,8 @@ int main(){
     printf("Division : %s\n",student[a].div);
     printf("Department : %s\n",student[a].dept);
     printf("                   Practical Marks                   \n");
-    printf("PR1\tPR2\tPR3\tPR4\tPR5\tPR6\tPR7\tPR8\tPR9\tPR10\n");
-    for(int b=0;b<10;b++){
-        printf(" %d \t",student[a].pract[b]);
-    }
-    printf("\nPR11\tPR12\tPR13\tPR14\tPR15\tPR16\tPR17\tPR18\tPR19\tPR20\n");
-    for(int b=10;b<20;b++){
+    printf("PR1\tPR2\tPR3\tPR4\tPR5\n");
+    for(int b=0;b<5;b++){
         printf(" %d \t",student[a].pract[b]);
     }
         }
