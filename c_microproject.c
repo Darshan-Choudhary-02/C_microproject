@@ -4,8 +4,8 @@
 typedef struct data{
         char name[100];
         int enroll;
-        char div[5];
-        char dept[5];
+        char div[100];
+        char dept[100];
         int pract[5];
         int pract_total;
         int ut[2];
@@ -43,7 +43,7 @@ int main(){
         student[i].ut_total = (student[i].ut[0]+student[i].ut[1])/2;
 
     }
-    int a;
+    int a, count=0;
     int search;
     printf("Enter enrollment number to search : ");
     scanf("%d",&search);
@@ -53,16 +53,21 @@ int main(){
     printf("Enrollment number : %d\n",student[a].enroll);
     printf("Division : %s\n",student[a].div);
     printf("Department : %s\n",student[a].dept);
-    printf("                   Practical Marks                   \n");
+    printf(" \t\tPractical Marks \n");
     printf("PR1\tPR2\tPR3\tPR4\tPR5\n");
     for(int b=0;b<5;b++){
         printf(" %d \t",student[a].pract[b]);
     }
+           printf("\n\t\tUnit Test Marks");
+                printf("\nUT1\tUT2\tAvg Total\n");
+    for(int f=0;f<2;f++){
+        printf("%d\t",student[a].ut[f]);
+    }
+    printf("   %d",student[a].ut_total);
+    count++;
         }
         else
         printf("Invalid Enrollment Number.");
-    }
-    
-    
+    }    
     return 0;
 }
