@@ -53,21 +53,39 @@ int main(){
     printf("Enrollment number : %d\n",student[a].enroll);
     printf("Division : %s\n",student[a].div);
     printf("Department : %s\n",student[a].dept);
-    printf(" \t\tPractical Marks \n");
-    printf("PR1\tPR2\tPR3\tPR4\tPR5\n");
+    printf("----------------------------------------\n");
+    printf("|            Practical Marks           |\n");
+    printf("|--------------------------------------|\n");
+    printf("|  PR1 \t|  PR2 \t|  PR3 \t|  PR4 \t|  PR5 |\n");
+    
     for(int b=0;b<5;b++){
-        printf(" %d \t",student[a].pract[b]);
-    }
-           printf("\n\t\tUnit Test Marks");
-                printf("\nUT1\tUT2\tAvg Total\n");
+        printf("|  %d   ",student[a].pract[b]);
+        
+    }printf("|");
+    printf("\n----------------------------------------\n");
+    printf("----------------------------------------\n");
+           printf("|\t     Unit Test Marks           |");
+           printf("\n|--------------------------------------|\n");
+                printf("|     UT1    |     UT2    |  Avg Total |\n");
     for(int f=0;f<2;f++){
-        printf("%d\t",student[a].ut[f]);
+        printf("|     %d     ",student[a].ut[f]);
     }
-    printf("   %d",student[a].ut_total);
-    count++;
+    printf("|      %d    |",student[a].ut_total);
+    printf("\n----------------------------------------\n");
+    if (student[a].ut_total<=11)
+    {
+       printf("You are fail in Unit Test");
+    }
+    else
+    {
+      printf("You are passed in Unit Test ");
+    }
+    
+     count++;
         }
         else
         printf("Invalid Enrollment Number.");
-    }    
+    } 
+       
     return 0;
 }
