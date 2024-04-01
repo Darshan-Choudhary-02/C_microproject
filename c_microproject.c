@@ -82,6 +82,7 @@ int main(){
     }
     
      count++;
+     break;
         }
         else
         printf("Invalid Enrollment Number.");
