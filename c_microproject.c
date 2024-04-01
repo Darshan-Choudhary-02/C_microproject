@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-
+//code for our c microproject
 typedef struct data{
         char name[100];
         int enroll;
